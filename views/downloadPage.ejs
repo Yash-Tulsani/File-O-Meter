@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/downloadPage.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Volkhov&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+    </style>
+</head>
+
+<body>
+    <div id="alert">Hi I am alert</div>
+    <div id="downloadContainer">
+        <div id="downloadImgBox"></div>
+        <div id="fileDetailsBox">
+            <div id="detailTitle">Your file is ready to download</div>
+            <div id="expireText">Link expires in 24 hours</div>
+            <div id="fileDetails">
+                <div id="fileName">
+                    <%=locals.fileName%>
+                </div>
+                <div id="fileSize">
+                    <%=locals.size%>&#160;KB
+                </div>
+            </div>
+
+        </div>
+        <div id="passwordContainer">
+            <div id="passwordTitle1">This file is password protected</div>
+            <div id="passwordTitle2">Enter password to download the file</div>
+            <form  method="post" id="filePasswordForm">
+                <div id="passwordBox">
+                    <div id="passwordInpBox">
+                        <input type="password" id="passwordInp" name="password"></input>
+                        <span id="floatingText">Password</span>
+                    </div>
+                    <div id="showPasswordIcon">
+                        <img src="../Images/eye_password_see_view_icon.svg" id="eyeClosedIcon" alt="" srcset=""
+                            class="showPasswordImg">
+                        <img src="../Images/eye_key_look_password_security_icon.svg" id="eyeOpenIcon" alt="" srcset=""
+                            class="showPasswordImg">
+                    </div>
+                </div>
+                <button type="submit" id="enterPassword">Confirm</button>
+            </form>
+        </div>
+        <div id="downloadBtn">Download File</div>
+    </div>
+    <script src="/JS/downloadPage.js"></script>
+</body>
+
+</html>

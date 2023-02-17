@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/fileDrop.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Volkhov&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');
+    </style>
+    <!-- CSS only -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> -->
+
+</head>
+
+<body>
+    <div id="alert">Hi I am alert</div>
+    <section class="uploadContainer">
+        <div class="dropZone">
+            <div class="dropImgContainer">
+                <img class="dropImg" draggable="false" id="centerImg" src="/Images/dropIcon.svg" alt="File Image">
+                <img class="dropImg" draggable="false" id="leftImg" src="/Images/dropIcon.svg" alt="File Image">
+                <img class="dropImg" draggable="false" id="rightImg" src="/Images/dropIcon.svg" alt="File Image">
+            </div>
+            <input type="file" name="" id="fileInp">
+            <div id="dropText">Drag your file here or <span id="browse">browse</span></div>
+
+
+
+        </div>
+        <div id="progressContainer">
+            <div id="progressBar1"></div>
+            <div id="progressText">Uploading....</div>
+            <div id="progressPercent">0%</div>
+            <div id="progressBar2"></div>
+
+        </div>
+        <!-- <span class="material-icons">
+            content_copy
+        </span> -->
+
+        <div id="passwordBox">
+            <div id="passwordTitle">Password</div>
+            <div id="passwordInfo">
+                <div id="passwordInfoIcon"></div>
+                <div id="passwordInfoText">File will be password protected
+                    i.e. it cannot be downloaded without password by user to whom you share.
+                </div>
+            </div>
+            <div id="passwordInput">
+                <div id="passwordInp">
+                    <input type="password" name="" id="inputPassword">
+                    <span id="floatingText">Password</span>
+                </div>
+                <div id="showPasswordIcon">
+                    <img src="../Images/eye_password_see_view_icon.svg" id="eyeClosedIcon" alt="" srcset=""
+                        class="showPasswordImg">
+                    <img src="../Images/eye_key_look_password_security_icon.svg" id="eyeOpenIcon" alt="" srcset=""
+                        class="showPasswordImg">
+                </div>
+            </div>
+            <div id="buttonBox">
+                <div id="addPassword">Add Password</div>
+                <div id="cancelPassword">Cancel</div>
+            </div>
+        </div>
+        <div id="passwordContainer">
+            <div id="passwordText">Make file password protected</div>
+            <div id="passwordIcon"></div>
+        </div>
+
+        <div id="shareContainer">
+
+            <div id="shareLink">
+                <p id="expireText">Link Expires in 24hrs</p>
+                <div id="linkBox">
+                    <input type="text" id="link" readonly value=""> </input>
+                    <span class="material-icons" id="copyBtn">
+                        content_copy
+                        <div id="copiedBox1">Copied!</div>
+                        <div id="copiedBox2"></div>
+                    </span>
+                </div>
+            </div>
+
+            <p id="choiceText">
+                Or Send Via Email
+            </p>
+
+
+            <form id="emailForm">
+                <div class="emailBox">
+                    <div class="enterEmail">
+                        <label for="senderEmail" class="emailText">Your Email</label>
+
+                        <input type="email" required name="senderEmail" id="senderEmail" class="emailInp">
+                    </div>
+                    <div class="emailInvalidBox">
+                        <i class="fa-solid fa-circle-exclamation invalidIcon"></i>
+                        <span class="invalidText">Invalid email!</span>
+                        <!-- Email should have username of length between 6 to 30, should contain '@' and '.' and end with domain extensions(e.g.- .com,.org). -->
+                    </div>
+                </div>
+                <div class="emailBox">
+                    <div class="enterEmail">
+                        <label for="receiverEmail" class="emailText">Receiver's Email</label>
+                        <input type="email" required name="receiverEmail" id="receiverEmail" class="emailInp">
+                    </div>
+                    <div class="emailInvalidBox">
+                        <i class="fa-solid fa-circle-exclamation invalidIcon"></i>
+                        <span class="invalidText">Invalid email!</span>
+                        <!-- Email should have username of length between 6 to 30, should contain '@' and '.' and end with domain extensions(e.g.- .com,.org). -->
+                    </div>
+                </div>
+                <button id="sendEmailBtn" type="submit">Send</button>
+            </form>
+
+        </div>
+    </section>
+    <div id="illustrationContainer"></div>
+    <script src="https://kit.fontawesome.com/64721a12ed.js" crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script> -->
+
+    <script src="/JS/fileDrop.js"></script>
+</body>
+
+</html>
